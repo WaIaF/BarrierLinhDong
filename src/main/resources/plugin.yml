@@ -1,0 +1,6 @@
+name: BarrierLinhDong
+version: '${project.version}'
+main: me.waiaf.barrierlinhdong.Main
+api-version: 1.16
+authors: [ WaIaF ]
+description: Sus
