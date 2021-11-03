@@ -38,7 +38,7 @@ public final class Main extends JavaPlugin implements Listener {
 
             } else if (playerLastBlock.get(player) != null && playerLastBlock.containsKey(player)) {
                 for (Player otherPlayers : Bukkit.getOnlinePlayers()) {
-                    if (otherPlayers.getName().equals(player.getName())) continue;
+                    if (!otherPlayers.getName().equals(player.getName())) return;
                     Block last = playerLastBlock.get(player);
                     Bukkit.getScheduler().runTask(this, () -> {
                         if (player.isFlying()) return;
