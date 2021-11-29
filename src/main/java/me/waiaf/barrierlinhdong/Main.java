@@ -30,7 +30,7 @@ public final class Main extends JavaPlugin implements Listener {
                 for (Player otherPlayers : Bukkit.getOnlinePlayers()) {
                     if (otherPlayers.getName().equals(player.getName())) return;
                     otherPlayers.sendBlockChange(player.getLocation(), Material.BARRIER.createBlockData());
-                    if (otherPlayers.getNearbyEntities(0.5,1.8,0.5).contains(player)) {
+                    if (otherPlayers.getNearbyEntities(0.1,1.25,0.1).contains(player)) {
                         otherPlayers.sendBlockChange(player.getLocation(), Material.AIR.createBlockData());
                     }
                     playerLastBlock.put(player, block);
@@ -44,7 +44,7 @@ public final class Main extends JavaPlugin implements Listener {
                         if (player.isFlying()) return;
                         otherPlayers.sendBlockChange(last.getLocation(), last.getType().createBlockData());
                         otherPlayers.sendBlockChange(player.getLocation(), Material.BARRIER.createBlockData());
-                        if (otherPlayers.getNearbyEntities(0.5,1.8,0.5).contains(player)) {
+                        if (otherPlayers.getNearbyEntities(0.1,1.25,0.1).contains(player)) {
                             otherPlayers.sendBlockChange(player.getLocation(), Material.AIR.createBlockData());
                         }
                         playerLastBlock.put(player, block);
